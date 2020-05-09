@@ -24,7 +24,7 @@ export const DomFactory = {
   Checkbox: () => {
     return DomFactory.Input({initialValue: '', type: 'checkbox'});
   },
-  Textbox: (value) => {
+  TextBox: (value) => {
     if (!value) value = '';
     return DomFactory.Input({initialValue: value, type: 'input'});
   },

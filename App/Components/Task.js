@@ -23,7 +23,7 @@ export const Task = function (index) {
     element = DomFactory.ListItem(id);
     element.FunTime = {Component: api};
     taskCheckbox = DomFactory.Checkbox();
-    taskInput = DomFactory.Textbox();
+    taskInput = DomFactory.TextBox();
     deleteButton = DomFactory.Button('X');
     element.appendChild(taskCheckbox);
     element.appendChild(taskInput);
