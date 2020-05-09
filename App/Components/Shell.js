@@ -9,19 +9,17 @@ export const Shell = function() {
   const initialize = function() {
     id = ComponentNames.Shell;
     element = document.getElementById(id);
-    render();
+    Render();
   };
   const adoptTasks = function(tasksElement){
     element.appendChild(tasksElement)
   };
-  const render = function() {
+  const Render = function() {
     element.FunTime = {Component: api};
     tasks = Tasks();
     tasks.Render(adoptTasks);
   };
-  api = {
-    Render: render
-  };
+  api = {Render};
   document.addEventListener("DOMContentLoaded", initialize);
   return api;
 };

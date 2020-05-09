@@ -19,9 +19,9 @@ export const Tasks = function() {
     addButton.addEventListener('click',onAddTaskClicked);
   };
   const onAddTaskClicked = function() {
-    add();
+    Add();
   };
-  const add = function() {
+  const Add = function() {
     const index = taskCounter;
     const task = Task(index);
     task.Render(adoptTask);
@@ -32,26 +32,22 @@ export const Tasks = function() {
     unOrderedList.appendChild(taskElement);
     return element;
   }
-  const remove = function(index, element) {
+  const Remove = function(index, element) {
     tasks.splice(index, 1);
     unOrderedList.removeChild(element);
   }
-  const render = function(acceptAdoption) {
+  const Render = function(acceptAdoption) {
     element = DomFactory.Divider(id);
     unOrderedList = DomFactory.UnOrderedList();
     addButton = DomFactory.Button('New Task');
     element.appendChild(addButton);
     element.appendChild(unOrderedList);
     element.FunTime = {Component: api};
-    add();
+    Add();
     subscribe();
     parent = acceptAdoption(element);
   };
   initialize();
-  api = {
-    Render: render,
-    Add: add,
-    Remove: remove
-  };
+  api = {Add, Remove, Render};
   return api;
 };

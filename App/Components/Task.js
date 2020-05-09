@@ -19,7 +19,7 @@ export const Task = function(index) {
     const tasks = parent.FunTime.Component;
     tasks.Remove(index, element);
   };
-  const render = function(acceptAdoption) {
+  const Render = function(acceptAdoption) {
     element = DomFactory.ListItem(id);
     element.FunTime = {Component: api};
     taskCheckbox = DomFactory.Checkbox();
@@ -31,9 +31,7 @@ export const Task = function(index) {
     subscribe();
     parent = acceptAdoption(api, element);
   };
-  api = {
-    Render: render
-  };
+  api = {Render};
   initialize();
   return api;
 };
