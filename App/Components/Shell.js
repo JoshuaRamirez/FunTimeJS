@@ -7,12 +7,15 @@ export const Shell = function () {
   let tasks;
   let api;
   const initialize = function () {
-    id = ComponentNames.Shell;
-    element = document.getElementById(id);
-    Render();
+    document.addEventListener("DOMContentLoaded", activate);
   };
   const adoptTasks = function (tasksElement) {
     element.appendChild(tasksElement)
+  };
+  const activate = function ()  {
+    id = ComponentNames.Shell;
+    element = document.getElementById(id);
+    Render();
   };
   const Render = function () {
     element.FunTime = {Component: api};
@@ -20,6 +23,6 @@ export const Shell = function () {
     tasks.Render(adoptTasks);
   };
   api = {Render};
-  document.addEventListener("DOMContentLoaded", initialize);
+  initialize();
   return api;
 };
