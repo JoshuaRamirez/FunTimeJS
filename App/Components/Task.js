@@ -5,9 +5,9 @@ export const Task = function (index) {
   let id;
   let element;
   let parent;
+  let deleteButton;
   let taskInput;
   let taskCheckbox;
-  let deleteButton;
   let api;
   const initialize = function () {
     id = ComponentNames.Task + index;

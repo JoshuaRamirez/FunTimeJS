@@ -8,9 +8,9 @@ export const Tasks = function () {
   let parent;
   let addButton;
   let unOrderedList;
+  let taskCounter;
   let tasks;
   let api;
-  let taskCounter;
   const initialize = function () {
     id = ComponentNames.Tasks;
     tasks = [];
