@@ -1,7 +1,7 @@
 import {ComponentNames} from "../Core/ComponentNames.js";
 import {DomFactory} from "../Core/DomFactory.js";
 
-export const Task = function(index) {
+export const Task = function (index) {
   let id;
   let element;
   let parent;
@@ -9,17 +9,17 @@ export const Task = function(index) {
   let taskCheckbox;
   let deleteButton;
   let api;
-  const initialize = function() {
+  const initialize = function () {
     id = ComponentNames.Task + index;
   };
-  const subscribe = function() {
+  const subscribe = function () {
     deleteButton.addEventListener('click', onDeleteButtonClicked);
   };
-  const onDeleteButtonClicked = function() {
+  const onDeleteButtonClicked = function () {
     const tasks = parent.FunTime.Component;
     tasks.Remove(index, element);
   };
-  const Render = function(acceptAdoption) {
+  const Render = function (acceptAdoption) {
     element = DomFactory.ListItem(id);
     element.FunTime = {Component: api};
     taskCheckbox = DomFactory.Checkbox();

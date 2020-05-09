@@ -22,15 +22,15 @@ export const DomFactory = {
     return input;
   },
   Checkbox: () => {
-    return DomFactory.Input({initialValue:'',type:'checkbox'});
+    return DomFactory.Input({initialValue: '', type: 'checkbox'});
   },
   Textbox: (value) => {
-    if(!value)value='';
-    return DomFactory.Input({initialValue:value,type:'input'});
+    if (!value) value = '';
+    return DomFactory.Input({initialValue: value, type: 'input'});
   },
   UnOrderedList: (id) => {
     const list = document.createElement('ul');
-    if(id)list.setAttribute('id', id);
+    if (id) list.setAttribute('id', id);
     return list;
   },
   ListItem: (id) => {
