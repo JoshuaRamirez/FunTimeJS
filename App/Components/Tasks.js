@@ -19,7 +19,7 @@ export const Tasks = function () {
   const adoptTask = function (task, taskElement) {
     unOrderedList.appendChild(taskElement);
     return element;
-  }
+  };
   const onAddTaskClicked = function () {
     Add();
   };
@@ -36,7 +36,7 @@ export const Tasks = function () {
   const Remove = function (index, element) {
     tasks.splice(index, 1);
     unOrderedList.removeChild(element);
-  }
+  };
   const Render = function (acceptAdoption) {
     element = DomFactory.Divider(id);
     unOrderedList = DomFactory.UnOrderedList();

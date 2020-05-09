@@ -1,9 +1,4 @@
 export const DomFactory = {
-  Attribute: (name, value) => {
-    const attribute = document.createAttribute(name)
-    attribute.value = value;
-    return attribute;
-  },
   Element: (type, attributes) => {
     const element = document.createElement(type, attributes);
     attributes.forEach(attribute => {
@@ -12,14 +7,15 @@ export const DomFactory = {
     return element;
   },
   Input: (options) => {
+    let element;
     const initialValue = options.initialValue;
-    const type = options.type
+    const type = options.type;
     const attributes = [
       {name: "value", value: initialValue},
       {name: "type", value: type},
     ];
-    const input = DomFactory.Element("input", attributes);
-    return input;
+    element = DomFactory.Element("input", attributes);
+    return element;
   },
   Checkbox: () => {
     return DomFactory.Input({initialValue: "", type: "checkbox"});

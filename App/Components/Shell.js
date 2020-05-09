@@ -10,9 +10,9 @@ export const Shell = function () {
     document.addEventListener("DOMContentLoaded", activate);
   };
   const adoptTasks = function (tasksElement) {
-    element.appendChild(tasksElement)
+    element.appendChild(tasksElement);
   };
-  const activate = function ()  {
+  const activate = function () {
     id = ComponentNames.Shell;
     element = document.getElementById(id);
     Render();
