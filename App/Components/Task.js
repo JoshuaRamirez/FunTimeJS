@@ -12,12 +12,12 @@ export const Task = function (index) {
   const initialize = function () {
     id = ComponentNames.Task + index;
   };
-  const subscribe = function () {
-    deleteButton.addEventListener('click', onDeleteButtonClicked);
-  };
   const onDeleteButtonClicked = function () {
     const tasks = parent.FunTime.Component;
     tasks.Remove(index, element);
+  };
+  const subscribe = function () {
+    deleteButton.addEventListener('click', onDeleteButtonClicked);
   };
   const Render = function (acceptAdoption) {
     element = DomFactory.ListItem(id);

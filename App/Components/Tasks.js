@@ -16,11 +16,15 @@ export const Tasks = function () {
     tasks = [];
     taskCounter = 0;
   };
-  const subscribe = function () {
-    addButton.addEventListener('click', onAddTaskClicked);
-  };
+  const adoptTask = function (task, taskElement) {
+    unOrderedList.appendChild(taskElement);
+    return element;
+  }
   const onAddTaskClicked = function () {
     Add();
+  };
+  const subscribe = function () {
+    addButton.addEventListener('click', onAddTaskClicked);
   };
   const Add = function () {
     const index = taskCounter;
@@ -29,10 +33,6 @@ export const Tasks = function () {
     tasks.push(task);
     taskCounter++;
   };
-  const adoptTask = function (task, taskElement) {
-    unOrderedList.appendChild(taskElement);
-    return element;
-  }
   const Remove = function (index, element) {
     tasks.splice(index, 1);
     unOrderedList.removeChild(element);
