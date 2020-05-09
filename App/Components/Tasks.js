@@ -24,7 +24,7 @@ export const Tasks = function () {
     Add();
   };
   const subscribe = function () {
-    addButton.addEventListener('click', onAddTaskClicked);
+    addButton.addEventListener("click", onAddTaskClicked);
   };
   const Add = function () {
     const index = taskCounter;
@@ -40,7 +40,7 @@ export const Tasks = function () {
   const Render = function (acceptAdoption) {
     element = DomFactory.Divider(id);
     unOrderedList = DomFactory.UnOrderedList();
-    addButton = DomFactory.Button('New Task');
+    addButton = DomFactory.Button("New Task");
     element.appendChild(addButton);
     element.appendChild(unOrderedList);
     element.FunTime = {Component: api};

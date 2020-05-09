@@ -15,37 +15,37 @@ export const DomFactory = {
     const initialValue = options.initialValue;
     const type = options.type
     const attributes = [
-      {name: 'value', value: initialValue},
-      {name: 'type', value: type},
+      {name: "value", value: initialValue},
+      {name: "type", value: type},
     ];
-    const input = DomFactory.Element('input', attributes);
+    const input = DomFactory.Element("input", attributes);
     return input;
   },
   Checkbox: () => {
-    return DomFactory.Input({initialValue: '', type: 'checkbox'});
+    return DomFactory.Input({initialValue: "", type: "checkbox"});
   },
   TextBox: (value) => {
-    if (!value) value = '';
-    return DomFactory.Input({initialValue: value, type: 'input'});
+    if (!value) value = "";
+    return DomFactory.Input({initialValue: value, type: "input"});
   },
   UnOrderedList: (id) => {
-    const list = document.createElement('ul');
-    if (id) list.setAttribute('id', id);
+    const list = document.createElement("ul");
+    if (id) list.setAttribute("id", id);
     return list;
   },
   ListItem: (id) => {
-    const listItem = document.createElement('li');
-    listItem.setAttribute('id', id);
+    const listItem = document.createElement("li");
+    listItem.setAttribute("id", id);
     return listItem;
   },
   Button: (label) => {
-    const button = document.createElement('button');
+    const button = document.createElement("button");
     button.innerText = label;
     return button;
   },
   Divider: (id) => {
-    const divider = document.createElement('div');
-    divider.setAttribute('id', id);
+    const divider = document.createElement("div");
+    divider.setAttribute("id", id);
     return divider;
   }
 };

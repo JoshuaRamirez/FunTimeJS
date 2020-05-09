@@ -17,14 +17,14 @@ export const Task = function (index) {
     tasks.Remove(index, element);
   };
   const subscribe = function () {
-    deleteButton.addEventListener('click', onDeleteButtonClicked);
+    deleteButton.addEventListener("click", onDeleteButtonClicked);
   };
   const Render = function (acceptAdoption) {
     element = DomFactory.ListItem(id);
     element.FunTime = {Component: api};
     taskCheckbox = DomFactory.Checkbox();
     taskInput = DomFactory.TextBox();
-    deleteButton = DomFactory.Button('X');
+    deleteButton = DomFactory.Button("X");
     element.appendChild(taskCheckbox);
     element.appendChild(taskInput);
     element.appendChild(deleteButton);
